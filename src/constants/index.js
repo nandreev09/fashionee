@@ -1,0 +1,25 @@
+export const PAGES_NAME = {
+  SHOP: "Shop",
+  CART: "Cart",
+};
+
+export const LS_KEYS = {
+  FAVORITES: "favorites",
+  CART: "cart",
+};
+
+export const PAGINATION_STYLES = {
+  CURRENT: "current",
+  INACTIVE: "inactive",
+};
+
+export const SORT_FILTER_KEYS = {
+  NAME_ASC: "NAME_ASC",
+  NAME_DESC: "NAME_DESC",
+  PRICE_ASC: "PRICE_ASC",
+  PRICE_DESC: "PRICE_DESC",
+};
+
+export const DELIVERY_PRICE = 15;
+export const DISCOUNT_VALUE = 0.1;
+export const PRODUCTS_PER_PAGE = 12;
