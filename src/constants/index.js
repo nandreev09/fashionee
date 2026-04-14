@@ -1,3 +1,9 @@
+export const DELIVERY_PRICE = 15;
+export const DISCOUNT_VALUE = 0.1;
+export const PRODUCTS_PER_PAGE = 12;
+export const PROMOCODE = "ilovereact";
+import styles from "../components/Pagination/Pagination.module.scss";
+
 export const PAGES_NAME = {
   SHOP: "Shop",
   CART: "Cart",
@@ -9,8 +15,8 @@ export const LS_KEYS = {
 };
 
 export const PAGINATION_STYLES = {
-  CURRENT: "current",
-  INACTIVE: "inactive",
+  CURRENT: styles.current,
+  INACTIVE: styles.inactive,
 };
 
 export const SORT_FILTER_KEYS = {
@@ -19,7 +25,3 @@ export const SORT_FILTER_KEYS = {
   PRICE_ASC: "PRICE_ASC",
   PRICE_DESC: "PRICE_DESC",
 };
-
-export const DELIVERY_PRICE = 15;
-export const DISCOUNT_VALUE = 0.1;
-export const PRODUCTS_PER_PAGE = 12;

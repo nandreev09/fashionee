@@ -1,3 +1,5 @@
+import styles from "./Filters.module.scss"
+
 export default function PriceFilter({
   price,
   setPrice,
@@ -12,11 +14,11 @@ export default function PriceFilter({
     setPrice({ ...price, max: e.target.value });
   };
   return (
-    <div className="price">
-      <div className="filter-title">Price</div>
-      <div className="price-filter">
+    <div className={styles.price}>
+      <div className={styles.filterTitle}>Price</div>
+      <div className={styles.priceFilter}>
         <input
-          className="price-input"
+          className={styles.priceInput}
           type="number"
           min="0"
           placeholder={`$${minimumPrice}`}
@@ -24,7 +26,7 @@ export default function PriceFilter({
           onChange={handleMinChange}
         />
         <input
-          className="price-input"
+          className={styles.priceInput}
           type="number"
           min="0"
           placeholder={`$${maximumPrice}`}

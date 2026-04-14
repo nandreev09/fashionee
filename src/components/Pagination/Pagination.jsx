@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import ArrowLeft from "../assets/icons/arrow-left.svg";
-import ArrowRight from "../assets/icons/arrow-right.svg";
-import ArrowLeftGray from "../assets/icons/arrow-left-gray.svg";
-import ArrowRightGray from "../assets/icons/arrow-right-gray.svg";
-import { PAGINATION_STYLES } from "../constants";
+import ArrowLeft from "../../assets/icons/arrow-left.svg";
+import ArrowRight from "../../assets/icons/arrow-right.svg";
+import ArrowLeftGray from "../../assets/icons/arrow-left-gray.svg";
+import ArrowRightGray from "../../assets/icons/arrow-right-gray.svg";
+import { PAGINATION_STYLES } from "../../constants";
+import styles from "./Pagination.module.scss";
 
 export const Pagination = ({ totalPages, currentPage, changeCurrentPage }) => {
   const [pagination, setPagination] = useState([]);
@@ -29,7 +30,7 @@ export const Pagination = ({ totalPages, currentPage, changeCurrentPage }) => {
   };
 
   return (
-    <div className="pagination">
+    <div className={styles.pagination}>
       <button onClick={handlePrev} disabled={currentPage === 1} alt="">
         <img src={currentPage === 1 ? ArrowLeftGray : ArrowLeft} alt="" />
       </button>

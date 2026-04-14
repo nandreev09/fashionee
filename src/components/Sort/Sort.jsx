@@ -1,9 +1,10 @@
 import React from "react";
-import { SORT_FILTER_KEYS } from "../constants";
+import { SORT_FILTER_KEYS } from "../../constants";
+import styles from "./Sort.module.scss";
 
 export const Sort = ({ onSort, value }) => (
   <select
-    className="sorting-controls"
+    className={styles.sortingControls}
     name=""
     id=""
     onChange={onSort}

@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.scss";
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className={styles.navbar}>
       <NavLink
         to="/"
         end
         style={{ marginLeft: "12px" }}
         className={({ isActive }) =>
-          isActive ? "nav-link active" : "nav-link"
+          `${styles.navLink} ${isActive ? styles.active : ""}`
         }
       >
         Shop
@@ -16,7 +17,7 @@ export default function Navbar() {
       <NavLink
         to="cart"
         className={({ isActive }) =>
-          isActive ? "nav-link active" : "nav-link"
+          `${styles.navLink} ${isActive ? styles.active : ""}`
         }
       >
         Cart

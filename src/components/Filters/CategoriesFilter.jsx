@@ -1,5 +1,6 @@
-import BG_ICON from "../assets/icons/bg.svg";
-import LINE_ICON from "../assets/icons/line.svg";
+import BG_ICON from "../../assets/icons/bg.svg";
+import LINE_ICON from "../../assets/icons/line.svg";
+import styles from "./Filters.module.scss";
 
 export default function Categories({
   availableCategories,
@@ -19,18 +20,18 @@ export default function Categories({
     }
   };
   return (
-    <div className="categories">
-      <div className="filter-title">Categories</div>
-      <ul className="categories-list">
+    <div className={styles.categories}>
+      <div className={styles.filterTitle}>Categories</div>
+      <ul className={styles.categoriesList}>
         {availableCategories.map((category) => (
-          <div key={category} className="categorie-string">
+          <div key={category} className={styles.categorieString}>
             <img
               src={selectedCategories.includes(category) ? LINE_ICON : BG_ICON}
               alt=""
             />
             <li
-              className={`categorie ${
-                selectedCategories.includes(category) ? "active" : ""
+              className={`${styles.categorie} ${
+                selectedCategories.includes(category) ? styles.active : ""
               }`}
               onClick={() => handleClick(category)}
             >

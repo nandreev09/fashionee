@@ -1,8 +1,8 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
-import ContentBlock from "./components/contentblock";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import ContentBlock from "./components/ContentBlock/ContentBlock";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 export default function Layout() {
   return (

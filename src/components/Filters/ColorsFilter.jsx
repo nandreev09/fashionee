@@ -1,3 +1,5 @@
+import styles from "./Filters.module.scss";
+
 export default function ColorsFilter({
   availableColors = [],
   selectedColors = [],
@@ -12,20 +14,20 @@ export default function ColorsFilter({
   };
 
   return (
-    <div className="colors">
-      <div className="title-and-list">
-        <div className="filter-title">Colors</div>
-        <form className="checkbox-list">
+    <div className={styles.colors}>
+      <div className={styles.titleAndList}>
+        <div className={styles.filterTitle}>Colors</div>
+        <form className={styles.checkboxList}>
           {availableColors.map((color) => (
-            <div key={color} className="checkbox">
+            <div key={color} className={styles.checkbox}>
               <input
                 type="checkbox"
-                className="checkbox-input"
+                className={styles.checkboxInput}
                 checked={selectedColors.includes(color)}
                 onChange={() => handleChange(color)}
                 id={color}
               />
-              <label className="checkbox-label" htmlFor={color}>
+              <label className={styles.checkboxLabel} htmlFor={color}>
                 {color}
               </label>
             </div>

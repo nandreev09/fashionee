@@ -1,0 +1,126 @@
+.productList {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.product {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.1);
+  padding-bottom: 30px;
+  position: relative;
+  &__productInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.productImageCart {
+  &__img {
+    width: 130px;
+    height: 140px;
+  }
+}
+
+.productTitle {
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.oldPriceCart {
+  font-family: Josefin Sans;
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.currentPriceCart {
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-size: 16px;
+}
+.priceAndQuantity {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  &__price {
+    display: flex;
+    align-items: center;
+  }
+}
+.productPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.totalProductPrice {
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.oldCurrentPrice {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: (248, 248, 251, 1);
+}
+
+.removeBtn {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  color: rgba(68, 68, 68, 0.1);
+  border: 1px solid rgba(68, 68, 68, 0.1);
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 10px;
+  left: 695px;
+  background-color: white;
+}
+.removeBtn:hover {
+  cursor: pointer;
+}
+
+.quantityBtn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.quantityBtn:hover {
+  background-color: #000;
+  color: white;
+  border-color: #000;
+}
+
+.quantityNumber {
+  min-width: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}

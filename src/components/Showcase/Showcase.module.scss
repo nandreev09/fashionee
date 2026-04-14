@@ -1,0 +1,45 @@
+.showcase {
+  display: flex;
+  flex-direction: row;
+  gap: 51px;
+  margin: 199px 0 0 389px;
+}
+.sitebar {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 244px;
+}
+.products {
+  width: 846px;
+}
+.apply {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  max-width: 240px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.applyButton {
+  background-color: black;
+  height: 50px;
+  color: white;
+  display: grid;
+  place-items: center;
+  width: 236px;
+}
+.saleImg {
+  width: 242px;
+  height: 400px;
+}
+.borderRight {
+  background-color: black;
+  width: 2px;
+  height: 50px;
+}

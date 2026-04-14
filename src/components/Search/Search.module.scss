@@ -1,0 +1,13 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 242px;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.2);
+}
+
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}

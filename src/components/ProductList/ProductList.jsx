@@ -1,18 +1,19 @@
-import data from "../products.json";
+import data from "../../products.json";
 import { useEffect } from "react";
 
-import { useFavorites } from "../context/favoritescontext";
-import { useCart } from "../context/cartcontext";
+import { useFavorites } from "../../context/favoritescontext";
+import { useCart } from "../../context/cartcontext";
 
-import favoriteIcon from "../assets/icons/heart.svg";
-import { PRODUCTS_PER_PAGE } from "../constants";
+import favoriteIcon from "../../assets/icons/heart.svg";
+import { PRODUCTS_PER_PAGE } from "../../constants";
 
-import { Pagination } from "./Pagination";
-import { Sort } from "./Sort";
+import { Pagination } from "../Pagination/Pagination";
+import { Sort } from "../Sort/Sort";
 
-import { useFilteredProducts } from "../hooks/useFilteredProducts";
-import { useSortedProducts } from "../hooks/useSortedProducts";
-import { usePagination } from "../hooks/usePagination";
+import { useFilteredProducts } from "../../hooks/useFilteredProducts";
+import { useSortedProducts } from "../../hooks/useSortedProducts";
+import { usePagination } from "../../hooks/usePagination";
+import styles from "./ProductList.module.scss";
 
 export default function ProductList({ search, colors, categories, price }) {
   const { addToCart, updateQuantity, getItemQuantity } = useCart();
@@ -41,37 +42,41 @@ export default function ProductList({ search, colors, categories, price }) {
 
   return (
     <div className="product-list-container">
-      <div className="list-header">
-        <h2 className="product-count">
+      <div className={styles.listHeader}>
+        <h2 className={styles.productCount}>
           There are <strong>{filteredProducts.length}</strong> products in this
           category
         </h2>
         <Sort onSort={(e) => setSortValue(e.target.value)} value={sortValue} />
       </div>
 
-      <div className="products-grid">
+      <div className={styles.productsGrid}>
         {pageProducts.map((product) => {
           const quantity = getItemQuantity(product.id);
           const favorite = isFavorite(product.id);
 
           return (
             <div key={product.id} className="product-card">
-              <div className="product-image">
+              <div className={styles.productImage}>
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="product-img"
+                  className={styles.productImg}
                 />
-                <div className="product-badges">
+                <div className={styles.productBadges}>
                   {product.isNew && (
-                    <span className="badge badge-new">NEW</span>
+                    <span className={`${styles.badge}${styles.badgeNew}`}>
+                      NEW
+                    </span>
                   )}
                   {product.isSale && (
-                    <span className="badge badge-sale">SALE</span>
+                    <span className={`${styles.badge}${styles.badgeSale}`}>
+                      SALE
+                    </span>
                   )}
                 </div>
                 <img
-                  className="card-favorite-icon"
+                  className={styles.cardFavoriteIcon}
                   src={favoriteIcon}
                   alt="Add to favorites"
                   onClick={() => toggleFavorite(product.id)}
@@ -83,34 +88,43 @@ export default function ProductList({ search, colors, categories, price }) {
                   }}
                 />
               </div>
-              <div className="product-info">
-                <h3 className="product-name">{product.name}</h3>
-                <div className="product-pricing">
+              <div className={styles.productInfo}>
+                <h3 className={styles.productName}>{product.name}</h3>
+                <div className={styles.productPricing}>
                   {product.isSale && product.oldPrice ? (
                     <>
-                      <span className="current-price">${product.price}</span>
-                      <span className="old-price">${product.oldPrice}</span>
+                      <span className={styles.currentPrice}>
+                        ${product.price}
+                      </span>
+                      <span className={styles.oldPrice}>
+                        ${product.oldPrice}
+                      </span>
                     </>
                   ) : (
-                    <span className="current-price">${product.price}</span>
+                    <span className={styles.currentPrice}>
+                      ${product.price}
+                    </span>
                   )}
                 </div>
               </div>
               {quantity === 0 ? (
-                <button className="buy-btn" onClick={() => addToCart(product)}>
+                <button
+                  className={styles.buyBtn}
+                  onClick={() => addToCart(product)}
+                >
                   Buy
                 </button>
               ) : (
-                <div className="quantity-selector">
+                <div className={styles.quantitySelector}>
                   <button
-                    className="quantity-btn"
+                    className={styles.quantityBtn}
                     onClick={() => updateQuantity(product.id, quantity - 1)}
                   >
                     -
                   </button>
-                  <span className="quantity-number">{quantity}</span>
+                  <span className={styles.quantityNumber}>{quantity}</span>
                   <button
-                    className="quantity-btn"
+                    className={styles.quantityBtn}
                     onClick={() => updateQuantity(product.id, quantity + 1)}
                   >
                     +

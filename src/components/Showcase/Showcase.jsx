@@ -1,13 +1,14 @@
-import saleImg from "../assets/img/sale.svg";
-import Search from "./Search";
-import Categories from "./CategoriesFilter";
-import PriceFilter from "./PriceFilter";
-import ColorsFilter from "./ColorsFilter";
-import Reviewed from "./Reviewed";
-import ProductList from "./ProductList";
-import data from "../products.json";
-import { useDebounce } from "../hooks/useDebounce";
-import { useFilters } from "../hooks/useFilters";
+import saleImg from "../../assets/img/sale.svg";
+import Search from "../Search/Search";
+import Categories from "../Filters/CategoriesFilter";
+import PriceFilter from "../Filters/PriceFilter";
+import ColorsFilter from "../Filters/ColorsFilter";
+import Reviewed from "../Reviewed/Reviewed";
+import ProductList from "../ProductList/ProductList";
+import data from "../../products.json";
+import { useDebounce } from "../../hooks/useDebounce";
+import { useFilters } from "../../hooks/useFilters";
+import styles from "./Showcase.module.scss";
 
 const colors = data.products.map((c) => c.color);
 const uniqueColors = [...new Set(colors)];
@@ -39,8 +40,8 @@ export default function Showcase() {
   const debouncedSearch = useDebounce(filters.search, 300);
 
   return (
-    <div className="showcase">
-      <div className="sitebar">
+    <div className={styles.showcase}>
+      <div className={styles.sitebar}>
         <Search
           search={filters.search}
           setSearch={(value) =>
@@ -71,21 +72,21 @@ export default function Showcase() {
           }
         />
 
-        <button className="apply" onClick={applyFilters}>
-          <div className="apply-button">Apply Filter</div>
-          <div className="border-right"></div>
+        <button className={styles.apply} onClick={applyFilters}>
+          <div className={styles.applyButton}>Apply Filter</div>
+          <div className={styles.boderRight}></div>
         </button>
 
-        <button className="apply" onClick={resetFilters}>
-          <div className="apply-button">Reset Filter</div>
-          <div className="border-right"></div>
+        <button className={styles.apply} onClick={resetFilters}>
+          <div className={styles.applyButton}>Reset Filter</div>
+          <div className={styles.boderRight}></div>
         </button>
 
         <Reviewed />
-        <img className="sale-img" src={saleImg} alt="" />
+        <img className={styles.saleImg} src={saleImg} alt="" />
       </div>
 
-      <div className="products">
+      <div className={styles.products}>
         <ProductList
           search={debouncedSearch}
           colors={filters.colors}

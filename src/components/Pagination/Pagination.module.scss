@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+  button {
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
+}
+
+.current {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 3px solid rgba(0, 0, 0, 1);
+  width: 22px;
+  height: 23px;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.inactive {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 30%;
+  border-bottom: 3px solid rgba(0, 0, 0, 1);
+  width: 10px;
+  height: 23px;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}

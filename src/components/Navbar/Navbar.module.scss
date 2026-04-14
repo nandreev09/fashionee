@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.navLink {
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    cursor: pointer;
+    color: rgba(255, 142, 142, 1);
+  }
+  &.active {
+    color: rgba(255, 142, 142, 1);
+  }
+}

@@ -1,0 +1,15 @@
+.sortingControls {
+    display: flex;
+    outline: none;
+    justify-content: space-between;
+    width: 262px;
+    border: none;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.2);
+    padding-bottom: 18px;
+    align-items: center;
+    appearance: none;
+    background-image: url(../src/assets/icons/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px auto;
+  }

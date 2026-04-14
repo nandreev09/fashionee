@@ -1,9 +1,10 @@
-import searchIcon from "../assets/icons/search.svg";
+import searchIcon from "../../assets/icons/search.svg";
+import styles from "./Search.module.scss";
 
 export default function Search({ search, setSearch }) {
   return (
-    <div className="search">
-      <div className="search-form">
+    <div className={styles.search}>
+      <div className={styles.searchForm}>
         <input
           type="text"
           placeholder="Search"
