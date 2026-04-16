@@ -15,6 +15,7 @@ export default function CartContent() {
       <div className={styles.productAndOrder}>
         <div className={styles.productsWindow}>
           <CartItems />
+
           <div className={styles.productListBorder}></div>
         </div>
         {cartItems.length > 0 && (
@@ -24,6 +25,7 @@ export default function CartContent() {
       <Promocode applyPromo={applyPromo} />
       <div className={styles.socials}>
         <div className={styles.findUs}>Find us here:</div>
+
         <div className={styles.socialList}>
           <div>FB</div>
           <div className={styles.spaceLine}></div>
