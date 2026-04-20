@@ -9,15 +9,22 @@ export default function ContentBlock() {
   return (
     <div className={styles.contentBlock}>
       <div className={styles.content}>
-        <div className={styles.title}>{title}</div>
+
+        <h1 className={styles.title}>{title}</h1>
+
         <div className={styles.breadCrumbs}>
+
           <Navbar />
+
           <div className={styles.verticalLine}></div>
+
         </div>
         <div className={styles.line}></div>
-        <img className={styles.rectangleMassiveOne} src={VectorObjImg} alt="" />
+
+        <img className={styles.rectangleMassiveOne} src={VectorObjImg} alt="VectorImg" />
       </div>
-      <img className={styles.contentImg} src={ShopImg} alt="" />
+
+      <img className={styles.contentImg} src={ShopImg} alt="VectorImg" />
     </div>
   );
 }

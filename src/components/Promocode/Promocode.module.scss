@@ -4,11 +4,13 @@
   flex-direction: column;
   gap: 40px;
 }
+
 .promoTitleAndSubtitle {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .promoTitle {
   font-family: Josefin Sans;
   font-weight: 400;
@@ -18,17 +20,20 @@
   text-align: right;
   text-transform: capitalize;
 }
+
 .promoSubtitle {
   font-family: Raleway;
   font-weight: 400;
   font-size: 16px;
   line-height: 170%;
 }
+
 .inputPromo {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
+
 .inputPromo #promo {
   margin-top: 10px;
   padding-bottom: 16px;
@@ -36,20 +41,24 @@
   width: 250px;
   height: 40px;
 }
+
 .applyPromo {
   display: flex;
   flex-direction: row;
   gap: 2px;
 }
+
 .promoBtn {
   width: 50px;
   height: 50px;
   background-color: black;
   border: none;
+
   &:hover {
     cursor: pointer;
   }
 }
+
 .borderRight {
   background-color: black;
   width: 2px;

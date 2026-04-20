@@ -2,17 +2,20 @@
   width: 111px;
   height: 16px;
 }
+
 .header {
   display: flex;
   flex-direction: row;
   margin: 50px 60px 0 60px;
   justify-content: space-between;
 }
+
 .burgerAndMenu {
   display: flex;
   flex-direction: row;
   gap: 67px;
 }
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -21,11 +24,13 @@
   font-weight: 500;
   font-size: 14px;
 }
+
 .menuItem:hover {
   cursor: pointer;
   filter: invert(67%) sepia(35%) saturate(600%) hue-rotate(310deg)
     brightness(100%) contrast(100%);
 }
+
 .pages {
   display: flex;
   flex-direction: row;
@@ -33,6 +38,7 @@
   align-items: center;
   @extend .menuItem;
 }
+
 .shop {
   display: flex;
   flex-direction: row;
@@ -40,36 +46,42 @@
   align-items: center;
   @extend .menuItem;
 }
+
 .burger {
   display: flex;
   flex-direction: row;
   gap: 40px;
   margin-bottom: 5px;
 }
+
 .bar {
   width: 22px;
   height: 2px;
   background-color: black;
   margin: 4px 0;
 }
+
 .icons {
   display: flex;
   flex-direction: row;
   gap: 40px;
   height: 20px;
 }
+
 .icon {
   width: 20px;
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
+
 .favorites {
   display: flex;
   flex-direction: row;
   gap: 4px;
   height: 18px;
 }
+
 .favoritesAmount {
   color: white;
   border-radius: 18px;
@@ -79,12 +91,14 @@
   font-weight: 700;
   font-size: 14px;
 }
+
 .shoppingBag {
   display: flex;
   flex-direction: row;
   gap: 4px;
   height: 18px;
 }
+
 .shoppingBagAmount {
   color: white;
   border-radius: 18px;

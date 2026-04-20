@@ -22,18 +22,25 @@ export default function CartContent() {
           <YourOrder promoDiscount={discount} promoCode={promoCode} />
         )}
       </div>
+
       <Promocode applyPromo={applyPromo} />
+
       <div className={styles.socials}>
         <div className={styles.findUs}>Find us here:</div>
 
         <div className={styles.socialList}>
+
           <div>FB</div>
           <div className={styles.spaceLine}></div>
+
           <div>TW</div>
           <div className={styles.spaceLine}></div>
+
           <div>INS</div>
           <div className={styles.spaceLine}></div>
+
           <div>PT</div>
+          
         </div>
       </div>
     </div>

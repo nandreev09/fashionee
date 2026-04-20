@@ -16,10 +16,13 @@ export default function ColorsFilter({
   return (
     <div className={styles.colors}>
       <div className={styles.titleAndList}>
-        <div className={styles.filterTitle}>Colors</div>
+
+        <h1 className={styles.filterTitle}>Colors</h1>
+
         <form className={styles.checkboxList}>
           {availableColors.map((color) => (
             <div key={color} className={styles.checkbox}>
+
               <input
                 type="checkbox"
                 className={styles.checkboxInput}
@@ -27,9 +30,11 @@ export default function ColorsFilter({
                 onChange={() => handleChange(color)}
                 id={color}
               />
+
               <label className={styles.checkboxLabel} htmlFor={color}>
                 {color}
               </label>
+
             </div>
           ))}
         </form>

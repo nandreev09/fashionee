@@ -6,6 +6,7 @@ export default function CartItems() {
 
   return (
     <div className={styles.productList}>
+
       {cartItems.length === 0 ? (
         <div>Your cart is empty</div>
       ) : (
@@ -19,37 +20,46 @@ export default function CartItems() {
               />
             </div>
             <div className={styles.productInfo}>
+
               <div className={styles.productTitle}>{item.name}</div>
+
               <div className={styles.productPrice}>
                 <div className={styles.priceAndQuantity}>
                   <div className={styles.priceAndQuantity__price}>
                     <div className={styles.oldCurrentPrice}>
+
                       {item.isSale && item.oldPrice && (
                         <div className={styles.oldPriceCart}>
                           ${item.oldPrice}
                         </div>
                       )}
+
                       <div className={styles.currentPriceCart}>
                         ${item.price}
                       </div>
+
                     </div>
                   </div>
                   <div className={styles.quantity}>
+
                     <button
                       className={styles.quantityBtn}
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
                     >
                       -
                     </button>
+
                     <span className={styles.quantityNumber}>
                       {item.quantity}
                     </span>
+
                     <button
                       className={styles.quantityBtn}
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
                     >
                       +
                     </button>
+                    
                   </div>
                 </div>
                 <div className={styles.totalProductPrice}>
@@ -57,12 +67,14 @@ export default function CartItems() {
                 </div>
               </div>
             </div>
+
             <button
               className={styles.removeBtn}
               onClick={() => removeFromCart(item.id)}
             >
               Х
             </button>
+
           </div>
         ))
       )}

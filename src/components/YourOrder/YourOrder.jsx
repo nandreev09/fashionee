@@ -24,31 +24,43 @@ export default function YourOrder({ promoDiscount, promoCode }) {
   };
   return (
     <div className={styles.yourOrder}>
+
       <div className={styles.orderTitle}>Your Order</div>
+
       <div className={styles.productsOrder}>
+
         <div className={styles.orderPrice}>
           <div className={styles.orderText}>Order price</div>
           <div className={styles.price}>${subtotal.toFixed(2)}</div>
         </div>
+        
         <div className={styles.discount}>
+
           <div className={styles.orderText}>Discount for promo code</div>
+
           <div className={styles.price}>
             {discountValue > 0 ? `-$${discountValue.toFixed(2)}` : "No"}
           </div>
         </div>
+
         <div className={styles.deliveryPrice}>
           <div className={styles.orderText}>Delivery</div>
           <div className={styles.price}>${DELIVERY_PRICE}</div>
         </div>
+
         <div className={styles.totalOrder}>
           <div className={styles.totalOrderText}>Total</div>
           <div className={styles.totalPrice}>${total.toFixed(2)}</div>
         </div>
+
       </div>
+
       <div className={styles.checkout}>
+
         <button onClick={handleCheckout} className={styles.checkoutBtn}>
           Checkout
         </button>
+
         <div className={styles.borderRight}></div>
       </div>
     </div>

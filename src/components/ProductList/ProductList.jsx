@@ -58,11 +58,13 @@ export default function ProductList({ search, colors, categories, price }) {
           return (
             <div key={product.id} className="product-card">
               <div className={styles.productImage}>
+
                 <img
                   src={product.image}
                   alt={product.name}
                   className={styles.productImg}
                 />
+
                 <div className={styles.productBadges}>
                   {product.isNew && (
                     <span className={`${styles.badge}${styles.badgeNew}`}>
@@ -75,6 +77,7 @@ export default function ProductList({ search, colors, categories, price }) {
                     </span>
                   )}
                 </div>
+
                 <img
                   className={styles.cardFavoriteIcon}
                   src={favoriteIcon}
@@ -87,9 +90,12 @@ export default function ProductList({ search, colors, categories, price }) {
                       : "none",
                   }}
                 />
+
               </div>
               <div className={styles.productInfo}>
+
                 <h3 className={styles.productName}>{product.name}</h3>
+
                 <div className={styles.productPricing}>
                   {product.isSale && product.oldPrice ? (
                     <>
@@ -106,6 +112,7 @@ export default function ProductList({ search, colors, categories, price }) {
                     </span>
                   )}
                 </div>
+                
               </div>
               {quantity === 0 ? (
                 <button

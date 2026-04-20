@@ -51,6 +51,7 @@
   max-width: 262px;
   max-height: 360px;
 }
+
 .cardFavoriteIcon {
   position: absolute;
   top: 15px;
@@ -68,12 +69,14 @@
     animation: pulse 0.3s ease;
   }
 }
+
 .productName {
   margin-top: 21px;
   font-family: Raleway;
   font-weight: 400;
   font-size: 16px;
 }
+
 .productPricing {
   margin-top: 9px;
   display: flex;
@@ -81,17 +84,20 @@
   gap: 16px;
   align-items: center;
 }
+
 .currentPrice {
   font-family: Josefin Sans;
   font-weight: 400;
   font-size: 20px;
 }
+
 .oldPrice {
   font-family: Josefin Sans;
   font-weight: 300;
   font-size: 16px;
   text-decoration: line-through;
 }
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -105,6 +111,7 @@
     transform: scale(1);
   }
 }
+
 .buyBtn {
   background-color: lightgrey;
   height: 40px;
@@ -116,10 +123,12 @@
   font-family: Josefin Sans;
   font-weight: 400;
   font-size: 20px;
+
   &:hover {
     cursor: pointer;
   }
 }
+
 .quantitySelector {
   display: flex;
   align-items: center;
@@ -130,6 +139,7 @@
   border-radius: 4px;
   background-color: #f9f9f9;
 }
+
 .quantityBtn {
   width: 30px;
   height: 30px;
@@ -140,12 +150,14 @@
   font-weight: bold;
   border-radius: 4px;
   transition: all 0.3s;
+
   &:hover {
     background-color: #000;
     color: white;
     border-color: #000;
   }
 }
+
 .quantityNumber {
   min-width: 30px;
   text-align: center;

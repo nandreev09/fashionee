@@ -31,9 +31,11 @@ export const Pagination = ({ totalPages, currentPage, changeCurrentPage }) => {
 
   return (
     <div className={styles.pagination}>
+
       <button onClick={handlePrev} disabled={currentPage === 1} alt="">
         <img src={currentPage === 1 ? ArrowLeftGray : ArrowLeft} alt="" />
       </button>
+
       {pagination.map((page) => (
         <div
           key={page.index}
@@ -47,12 +49,14 @@ export const Pagination = ({ totalPages, currentPage, changeCurrentPage }) => {
           {page}
         </div>
       ))}
+
       <button onClick={handleNext} disabled={currentPage === totalPages} alt="">
         <img
           src={currentPage === totalPages ? ArrowRightGray : ArrowRight}
           alt=""
         />
       </button>
+      
     </div>
   );
 };

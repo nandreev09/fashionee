@@ -4,6 +4,7 @@ import styles from "./Navbar.module.scss";
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
+
       <NavLink
         to="/"
         end
@@ -14,6 +15,7 @@ export default function Navbar() {
       >
         Shop
       </NavLink>
+
       <NavLink
         to="cart"
         className={({ isActive }) =>
@@ -22,6 +24,7 @@ export default function Navbar() {
       >
         Cart
       </NavLink>
+      
     </nav>
   );
 }

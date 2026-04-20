@@ -21,14 +21,18 @@ export default function Categories({
   };
   return (
     <div className={styles.categories}>
-      <div className={styles.filterTitle}>Categories</div>
+
+      <h1 className={styles.filterTitle}>Categories</h1>
+      
       <ul className={styles.categoriesList}>
         {availableCategories.map((category) => (
           <div key={category} className={styles.categorieString}>
+
             <img
               src={selectedCategories.includes(category) ? LINE_ICON : BG_ICON}
               alt=""
             />
+
             <li
               className={`${styles.categorie} ${
                 selectedCategories.includes(category) ? styles.active : ""
@@ -37,6 +41,7 @@ export default function Categories({
             >
               {category}
             </li>
+
           </div>
         ))}
       </ul>

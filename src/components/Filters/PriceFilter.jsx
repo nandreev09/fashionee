@@ -15,8 +15,9 @@ export default function PriceFilter({
   };
   return (
     <div className={styles.price}>
-      <div className={styles.filterTitle}>Price</div>
+      <h1 className={styles.filterTitle}>Price</h1>
       <div className={styles.priceFilter}>
+
         <input
           className={styles.priceInput}
           type="number"
@@ -25,6 +26,7 @@ export default function PriceFilter({
           value={price.min}
           onChange={handleMinChange}
         />
+
         <input
           className={styles.priceInput}
           type="number"
@@ -33,6 +35,7 @@ export default function PriceFilter({
           value={price.max}
           onChange={handleMaxChange}
         />
+
       </div>
     </div>
   );

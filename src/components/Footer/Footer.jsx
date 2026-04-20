@@ -16,15 +16,20 @@ export default function Footer() {
         <div className={styles.footerBlock}>
           <div className={styles.column}>
             <div className={styles.fashioneeLogo}>
+
               <img className={styles.logo} src={logoImg} alt="" />
+
               <div>
                 Cillum eu id enim aliquip aute ullamco anim. Culpa deserunt
                 nostrud excepteur voluptate.
               </div>
+
               <div className={styles.borderBottom}></div>
             </div>
+
             <div className={styles.socials}>
               <div className={styles.findUs}>Find us here:</div>
+
               <div className={styles.socialList}>
                 <div>FB</div>
                 <div className={styles.spaceLine}></div>
@@ -34,10 +39,12 @@ export default function Footer() {
                 <div className={styles.spaceLine}></div>
                 <div>PT</div>
               </div>
+
             </div>
           </div>
           <div className={styles.about}>
             <div className={styles.columnTitle}>About</div>
+
             <ul className={styles.footerColumn}>
               <li className={styles.footerLi}>About us</li>
               <li className={styles.footerLi}>Collections</li>
@@ -45,9 +52,11 @@ export default function Footer() {
               <li className={styles.footerLi}>Blog</li>
               <li className={styles.footerLi}>Contact us</li>
             </ul>
+
           </div>
           <div className={styles.useful}>
             <div className={styles.columnTitle}>Useful Links</div>
+
             <ul className={styles.footerColumn}>
               <li className={styles.footerLi}>Privacy Policy</li>
               <li className={styles.footerLi}>Terms of use</li>
@@ -55,13 +64,17 @@ export default function Footer() {
               <li className={styles.footerLi}>Shipping details</li>
               <li className={styles.footerLi}>FAQs</li>
             </ul>
+
           </div>
           <div className={styles.newsletter}>
+
             <div className={styles.newsletterTitle}>Newsletter</div>
+
             <div className={styles.subscribe}>
               Subscribe to be the first to hear about deals, offers and upcoming
               collections.
             </div>
+
             <div className={styles.emailForm}>
               <div className={styles.inputForm}>
                 <input type="text" placeholder="Enter your e-mail" />
@@ -69,6 +82,7 @@ export default function Footer() {
               </div>
               <div className={styles.borderBottom}></div>
             </div>
+
           </div>
         </div>
         <div className={styles.bottom}>
@@ -76,7 +90,9 @@ export default function Footer() {
           <div className={styles.bottomBar}>
             <div>© All right reserved. Fashionee 2020</div>
             <div className={styles.paymentMethods}>
+
               <div>Payment Methods:</div>
+              
               <div className={styles.paymentList}>
                 <img src={visaIcon} alt="" />
                 <img src={masterCardIcon} alt="" />
@@ -84,6 +100,7 @@ export default function Footer() {
                 <img src={payoneerIcon} alt="" />
               </div>
             </div>
+
           </div>
         </div>
       </div>
